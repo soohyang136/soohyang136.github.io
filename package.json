@@ -7,6 +7,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@skagami/gatsby-plugin-dark-mode": "^2.0.0",
     "gatsby": "^5.12.3",
     "gatsby-plugin-emotion": "^8.12.0",
     "gatsby-plugin-image": "^3.12.0",
@@ -17,6 +18,9 @@
     "gatsby-transformer-sharp": "^5.12.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-toggle-dark-mode": "^1.1.1",
+    "recoil": "^0.7.7",
+    "recoil-persist": "^5.1.0",
     "typescript": "^5.2.2"
   },
   "devDependencies": {
