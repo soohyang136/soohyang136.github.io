@@ -5,6 +5,7 @@ import GlobalStyle from '../components/common/GlobalStyle'
 import styled from '@emotion/styled'
 import { graphql } from 'gatsby'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
+import Introduction from '../components/main/Introduction'
 
 type IndexPageProps = {
     data:{
@@ -33,6 +34,7 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
     <Container>
         <GlobalStyle />
         <Header profileImage={gatsbyImageData} />
+        <Introduction profileImage={gatsbyImageData} />
     </Container>
   )
 }

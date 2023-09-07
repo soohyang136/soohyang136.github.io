@@ -25,13 +25,14 @@ const defaultStyle = css`
   }
 
   body {
-  --bg-color: #f8f9fa;
+  --bg-color: white;
   --text-color: #121212;
   --bg-color2: white;
   --excerpt: #475467;
   --prism-default-text: #24292e;
   --bg-inline: #e9ecef;
   --darkhover: #dee2e6;
+  --bottom-line: #E9ECEF;
 }
 
 body.dark {
@@ -42,6 +43,7 @@ body.dark {
   --prism-default-text: #e0e6f1;
   --bg-inline: #363636;
   --darkhover: #4d4d4d;
+  --bottom-line: #252525;
   color: var(--text-color);
 }
 `

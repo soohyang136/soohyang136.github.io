@@ -28,6 +28,7 @@ const ItemWrapper = styled.div`
 `
 
 const Logo = styled(Link)`
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
     font-size: 1.3125rem;
     font-family: "Fira Mono";
     font-weight: bold;
