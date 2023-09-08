@@ -69,13 +69,13 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
             { All: 0 },
           ),
         [],
-      );
+      )
   return (
     <Container>
         <GlobalStyle />
         <Header profileImage={gatsbyImageData} />
         <Introduction profileImage={gatsbyImageData} />
-        <PostList selectedCategory={selectedCategory} categoryList={categoryList} />
+        <PostList selectedCategory={selectedCategory} categoryList={categoryList} postList={edges} />
     </Container>
   )
 }

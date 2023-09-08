@@ -20,10 +20,10 @@ type GatsbyLinkProps = {
 } & CategoryItemProps
 
 const Wrapper = styled.div`
-    position: relative;
-    width: 11.5rem;
+    position: absolute;
+    width: auto;
     left: -13.5rem;
-    height: 100px;
+    height: auto;
 `
 
 const Box = styled.div`
@@ -55,16 +55,18 @@ const CategoryList: FunctionComponent<CategoryListProps> = function({
     categoryList
 }) {
     return (
-        <Wrapper>
-            <Box>
-                <Text>태그목록</Text>
-                {Object.entries(categoryList).map(([name, count]) => (
-                    <CategoryItem to={`/?category=${name}`} active={name === selectedCategory} >
-                        {name} ({count})
-                    </CategoryItem>
-                ))}
-            </Box>
-        </Wrapper>
+        <div style={{ 'position': 'relative'}}>
+            <Wrapper>
+                <Box>
+                    <Text>태그목록</Text>
+                    {Object.entries(categoryList).map(([name, count]) => (
+                        <CategoryItem to={`/?category=${name}`} active={name === selectedCategory} >
+                            {name} ({count})
+                        </CategoryItem>
+                    ))}
+                </Box>
+            </Wrapper>
+        </div>
     )
 }
 

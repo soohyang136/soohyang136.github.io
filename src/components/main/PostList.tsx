@@ -1,12 +1,15 @@
 import styled from '@emotion/styled'
 import React, { FunctionComponent } from 'react'
 import CategoryList from './CategoryList'
+import { PostFrontmatterType, PostListItemType } from '../../types/PostItem.type'
+import PostItem from './PostItem'
 
 type PostListProps = {
     selectedCategory: string,
     categoryList: {
         [key: string]: number;
     }
+    postList: PostListItemType[]
 }
 
 const Wrapper = styled.div`
@@ -55,10 +58,20 @@ const SearchInput = styled.input`
     color: var(--text-color);
 `
 
+const PostListBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    
+`
+
 const PostList: FunctionComponent<PostListProps> = function({
     selectedCategory,
-    categoryList
+    categoryList,
+    postList
 }) {
+    console.log(postList);
     return (
         <Wrapper>
             <Text>글</Text>
@@ -77,6 +90,22 @@ const PostList: FunctionComponent<PostListProps> = function({
                 </SearchBar>
             </SearchSection>
             <CategoryList selectedCategory={selectedCategory} categoryList={categoryList} />
+                
+            <PostListBox>
+                {postList.map(
+                ({
+                    node: {
+                        id,
+                        frontmatter
+                    },
+                }: PostListItemType) => (
+                    <PostItem
+                        {...frontmatter}
+                        key={id}
+                    />
+                )
+                )}
+            </PostListBox>
         </Wrapper>
     )
 }
