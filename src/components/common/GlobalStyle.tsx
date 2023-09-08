@@ -33,6 +33,7 @@ const defaultStyle = css`
   --bg-inline: #e9ecef;
   --darkhover: #dee2e6;
   --bottom-line: #E9ECEF;
+  --border: #343a40;
 }
 
 body.dark {
@@ -44,6 +45,7 @@ body.dark {
   --bg-inline: #363636;
   --darkhover: #4d4d4d;
   --bottom-line: #252525;
+  --border: #E0E0E0;
   color: var(--text-color);
 }
 `
